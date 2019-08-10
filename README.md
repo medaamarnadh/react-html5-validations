@@ -167,3 +167,5 @@ This is the function to check an individual form element is valid or not. The re
 }
 export  default  HomePage
 ```
+If you face any issues while integrating with your ReactJs applications or If you would like to give any suggestions please add them as issues in the Github repository. 
+[GitHub issues link](https://github.com/medaamarnadh/react-html5-validations/issues)

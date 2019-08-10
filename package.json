@@ -1,6 +1,6 @@
 {
   "name": "react-html5-validations",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is a light weight module to handle form validations in ReactJs such easy as Angular.io . We can use this library with any other Javascript client framework or library. This module best suites for libraries which does not have in built form validations support. For instance Jquery, ReactJs, CanJs etc.",
   "main": "index.js",
   "scripts": {
