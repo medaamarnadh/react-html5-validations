@@ -53,14 +53,23 @@ This is the method to validate a form.  We need to pass our form object into the
 }
 ```
 **value**: Value of the form element 
+	
 **validity**: true / false Tells us whether form element is valid or not 
+
 **longError**:  true/ false Tell us whether the form element has long error or not.
-**shortError**: true / false Tells us whether the form is short Error or not
+
+**shortError**: true / false Tells us whether the form is short Error or not 
+
 **aboveRangeError**: true/ false Tell us whether the form element has above range error or not 
+
 **rangeBelowError**: true/false Tell us whether the form element has below range error not
+
 **incorrectInput**: true/false. Tell us whether the form element has in correct input error or not 
+
 **patternError**: true/false. Tell us whether the form element has pattern error  or not 
+
 **customError**: true/false. Tell us whether the form element has custom error or not
+
 The beauty of this module is we do not need to learn any validations mechanism other than html5 validations to define in our forms 
 Note: We can use above method in form onSubmit event and  have to call `preventDefault` method of the event object.
 
