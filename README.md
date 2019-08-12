@@ -56,19 +56,24 @@ This is the method to validate a form.  We need to pass our form object into the
 	
 **validity**: true / false Tells us whether form element is valid or not 
 
-**longError**:  true/ false Tell us whether the form element has long error or not.
+**longError**:  true/ false. Set to true if the value exceeds the specified maxlength
 
-**shortError**: true / false Tells us whether the form is short Error or not 
+**shortError**: true / false. Set to true if the value fails to meet the specified minlength
 
-**aboveRangeError**: true/ false Tell us whether the form element has above range error or not 
+**aboveRangeError**: true/ false. Set to true, if an element's value is greater than its max attribute.
 
-**rangeBelowError**: true/false Tell us whether the form element has below range error not
+**rangeBelowError**: true/false. Set to true, if an element's value is less than its min attribute.
 
-**incorrectInput**: true/false. Tell us whether the form element has in correct input error or not 
+**incorrectInput**: true/false. is true if the user has provided input that the browser is unable to convert.
 
-**patternError**: true/false. Tell us whether the form element has pattern error  or not 
+**patternError**: true/false. Set to true, if an element's value does not match its pattern attribute.
 
-**customError**: true/false. Tell us whether the form element has custom error or not
+**customError**: true/false. Tell us whether the form element has custom error or not. We can get this error if you set a validtion message by using 
+> **setCustomValidity** 
+
+**stepMismatchError**: Set to true, if an element's value is invalid per its step attribute.
+
+**typeError**: Set to true, if an element's value is invalid per its type attribute.
 
 The beauty of this module is we do not need to learn any validations mechanism other than html5 validations to define in our forms 
 Note: We can use above method in form onSubmit event and  have to call `preventDefault` method of the event object.

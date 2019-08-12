@@ -13,11 +13,12 @@ exports.checkFormValidation = (validationForm) => {
             shortError: ele.validity.tooShort,
             aboveRangeError: ele.validity.rangeOverflow,
             rangeBelowError: ele.validity.rangeUnderflow,
-            typeError: ele.validity.typeError,
+            typeError: ele.validity.typeMismatch,
             valid: ele.validity.valid,
             incorrectInput: ele.validity.badInput,
             patternError: ele.validity.patternMismatch,
-            customError: ele.validity.customError
+            customError: ele.validity.customError,
+            stepMismatchError: ele.validity.stepMismatch
         }
         if(ele.checkValidity() === false) {
             valid = false
@@ -39,11 +40,12 @@ exports.checkElementValidation = (element) => {
             shortError: element.validity.tooShort,
             aboveRangeError: element.validity.rangeOverflow,
             rangeBelowError: element.validity.rangeUnderflow,
-            typeError: element.validity.typeError,
+            typeError: element.validity.typeMismatch,
             valid: element.validity.valid,
             incorrectInput: element.validity.badInput,
             patternError: element.validity.patternMismatch,
-            customError: element.validity.customError        
+            customError: element.validity.customError,
+            stepMismatchError: element.validity.stepMismatch     
     }
     return validationObject;
 }
