@@ -18,7 +18,8 @@ exports.checkFormValidation = (validationForm) => {
             incorrectInput: ele.validity.badInput,
             patternError: ele.validity.patternMismatch,
             customError: ele.validity.customError,
-            stepMismatchError: ele.validity.stepMismatch
+            stepMismatchError: ele.validity.stepMismatch,
+            requiredError: ele.validity.valueMissing
         }
         if(ele.checkValidity() === false) {
             valid = false
@@ -45,7 +46,8 @@ exports.checkElementValidation = (element) => {
             incorrectInput: element.validity.badInput,
             patternError: element.validity.patternMismatch,
             customError: element.validity.customError,
-            stepMismatchError: element.validity.stepMismatch     
+            stepMismatchError: element.validity.stepMismatch,
+            requiredError: element.validity.valueMissing 
     }
     return validationObject;
 }

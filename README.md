@@ -26,7 +26,8 @@ This is the method to validate a form.  We need to pass our form object into the
 			"valid": false,
 			"incorrectInput": false,
 			"patternError": false,
-			"customError": false
+			"customError": false,
+			"requiredError": true
 		},		  
 		"email": {
 			...
@@ -49,7 +50,8 @@ This is the method to validate a form.  We need to pass our form object into the
 	"valid": false,
 	"incorrectInput": false,
 	"patternError": false,
-	"customError": false
+	"customError": false,
+	"requiredError": true
 }
 ```
 **value**: Value of the form element 
@@ -74,6 +76,8 @@ This is the method to validate a form.  We need to pass our form object into the
 **stepMismatchError**: Set to true, if an element's value is invalid per its step attribute.
 
 **typeError**: Set to true, if an element's value is invalid per its type attribute.
+
+**requiredError**: Set to true, if an element's value is missing for required element in a form
 
 The beauty of this module is we do not need to learn any validations mechanism other than html5 validations to define in our forms 
 Note: We can use above method in form onSubmit event and  have to call `preventDefault` method of the event object.
@@ -149,7 +153,7 @@ This is the function to check an individual form element is valid or not. The re
 				
 				<Input type="text" name="fullName" placeholder="Enter full name" onChange={this.onChange} className="input-field"	required  />
 				
-				{this.state.formValidations.fullName && !this.state.formValidations.fullName.validity ? (
+				{this.state.formValidations.fullName && !this.state.formValidations.fullName.requiredError ? (
 				<span  className="error-msg">Please enter a valid full name</span>
 				): ''}
 			</FormGroup>
@@ -159,7 +163,7 @@ This is the function to check an individual form element is valid or not. The re
 					Email
 				</Label>
 				<Input type="email" name="email" onChange={this.onChange}	placeholder="Enter email ID" className="input-field" required/>
-				{this.state.formValidations.email && !this.state.formValidations.email.validity ? (
+				{this.state.formValidations.email && !this.state.formValidations.email.requiredError ? (
 				<span  className="error-msg">Please enter a valid email</span>
 				): ''}
 			</FormGroup>
